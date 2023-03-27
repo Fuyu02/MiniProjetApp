@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppliWPF_BDD_Personels"
         mc:Ignorable="d"
-        Title="WinConnexion" Height="350" Width="300">
+        Title="WinConnexion" Height="350" Width="300" MaxHeight="350" MaxWidth="300">
     <Grid>
         <Label x:Name="LblLogin" Content="Login" HorizontalAlignment="Left" Height="30" Margin="37,72,0,0" VerticalAlignment="Top" Width="71"/>
         <Label x:Name="LblMdp" Content="Mot de passe" HorizontalAlignment="Left" Height="29" Margin="37,123,0,0" VerticalAlignment="Top" Width="82"/>
         <Button x:Name="BtnSeConnecter" Content="Se connecter" HorizontalAlignment="Left" Height="25" Margin="37,246,0,0" VerticalAlignment="Top" Width="82" Click="SeConnecter"/>
         <Button x:Name="BtnAnnuler" Content="Annuler" HorizontalAlignment="Left" Height="25" Margin="184,246,0,0" VerticalAlignment="Top" Width="68" Click="Annuler"/>
-        <PasswordBox x:Name="PwdBox" HorizontalAlignment="Left" Height="29" Margin="157,123,0,0" VerticalAlignment="Top" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="157,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+        <PasswordBox x:Name="PwdBoxMdp" HorizontalAlignment="Left" Height="29" Margin="157,123,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBox x:Name="TxtBLogin" HorizontalAlignment="Left" Height="30" Margin="157,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
 
     </Grid>
 </Window>

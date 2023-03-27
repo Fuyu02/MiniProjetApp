@@ -55,9 +55,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AjouterFonctions.xaml.cs">
+      <DependentUpon>AjouterFonctions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AjouterServices.xaml.cs">
+      <DependentUpon>AjouterServices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionBDD.xaml.cs">
+      <DependentUpon>GestionBDD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GestionFonctionsServices.xaml.cs">
+      <DependentUpon>GestionFonctionsServices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierSupprimerFonctions.xaml.cs">
+      <DependentUpon>ModifierSupprimerFonctions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierSupprimerServices.xaml.cs">
+      <DependentUpon>ModifierSupprimerServices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SaisieIncorrectLoginMdp.xaml.cs">
+      <DependentUpon>SaisieIncorrectLoginMdp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinConnexion.xaml.cs">
       <DependentUpon>WinConnexion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinDeconnexion.xaml.cs">
+      <DependentUpon>WinDeconnexion.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AjouterFonctions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AjouterServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionBDD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionFonctionsServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,7 +110,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifierSupprimerFonctions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifierSupprimerServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SaisieIncorrectLoginMdp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinConnexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinDeconnexion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -106,6 +162,15 @@
       <Project>{4fbb0f96-9bce-46e3-863e-725a36b4bfeb}</Project>
       <Name>biblioBDDPersonels1</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fermerapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="deconnexion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="erreur.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

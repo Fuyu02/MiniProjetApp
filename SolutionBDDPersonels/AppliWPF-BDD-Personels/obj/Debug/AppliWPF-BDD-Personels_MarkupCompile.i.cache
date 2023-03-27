@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\fuyu0\Desktop\MiniPojet\MiniProjet2023-master\SolutionBDDPersonels\AppliWPF-BDD-Personels\obj\Debug\
+C:\Users\fuyu0\Desktop\MiniPojet\MiniProjet2023\SolutionBDDPersonels\AppliWPF-BDD-Personels\obj\Debug\
 AppliWPF_BDD_Personels
 none
 false
 DEBUG;TRACE
-C:\Users\fuyu0\Desktop\MiniPojet\MiniProjet2023-master\SolutionBDDPersonels\AppliWPF-BDD-Personels\App.xaml
-21658001796
+C:\Users\fuyu0\Desktop\MiniPojet\MiniProjet2023\SolutionBDDPersonels\AppliWPF-BDD-Personels\App.xaml
+10-1857652258
 
-7141975340
-141380267359
-MainWindow.xaml;WinConnexion.xaml;
+151033994770
+14-292671778
+AjouterFonctions.xaml;AjouterServices.xaml;GestionBDD.xaml;GestionFonctionsServices.xaml;MainWindow.xaml;ModifierSupprimerFonctions.xaml;ModifierSupprimerServices.xaml;SaisieIncorrectLoginMdp.xaml;WinConnexion.xaml;WinDeconnexion.xaml;
 
 True
 
