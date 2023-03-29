@@ -35,10 +35,13 @@ namespace AppliWPF_BDD_Personels
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-        
+
             //enregistre les modifications apportées
-           
-            //if(TxtBadIPV4.Text)
+
+            //if (TxtBadIPV4.Text)
+            {
+
+            }
             Properties.Settings.Default.IpServeur = TxtBadIPV4.Text;
           //  if(TxtBportecoute.Text)
             Properties.Settings.Default.PortEcouteTCP = TxtBportecoute.Text;
@@ -47,13 +50,6 @@ namespace AppliWPF_BDD_Personels
             Properties.Settings.Default.Save();
             MessageBox.Show("Paramètres sauvegardés");
             this.Close();  
-
-
-
-            ///Essaye de modification
-            ///
-
-          
 
             //if (username == "userBDDW" && password == "Password1234@il")
             //{

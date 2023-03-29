@@ -29,7 +29,7 @@ namespace AppliWPF_BDD_Personels
         {
             InitializeComponent();
             string Ipserveur = Properties.Settings.Default.IpServeur;
-            string PortEcoute = Properties.Settings.Default.PortEcouteTCP;
+            string PortEcoute = Properties.Settings.Default.PortEcouteTCP;// essayer de pouvoir l'utiliser 
             string NomBase = Properties.Settings.Default.NomBDD;
             string Username = Properties.Settings.Default.UserNom;
             string Password = Properties.Settings.Default.Password;
@@ -43,7 +43,6 @@ namespace AppliWPF_BDD_Personels
             List<Fonction> fonctions = bddPersonels.GetAllFonctions();
             List<Personnel> personnels = bddPersonels.GetAllPersonnels();
             LbServices.ItemsSource = services;
-            CBxTypeRecherche.Items.Add("Type");// le rendre invisible
             CBxTypeRecherche.Items.Add("Nom");
             CBxTypeRecherche.Items.Add("Prénom");
             CBxTypeRecherche.Items.Add("Fonction");
