@@ -28,7 +28,17 @@ namespace AppliWPF_BDD_Personels
         public MainWindow()
         {
             InitializeComponent();
-            bddPersonels= new CBDDPersonels1();// -> connection en simple utilisateur à l'ouverture de l'application
+            string Ipserveur = Properties.Settings.Default.IpServeur;
+            string PortEcoute = Properties.Settings.Default.PortEcouteTCP;
+            string NomBase = Properties.Settings.Default.NomBDD;
+            string Username = Properties.Settings.Default.UserNom;
+            string Password = Properties.Settings.Default.Password;
+
+            bddPersonels = new CBDDPersonels1(Username,Password,Ipserveur,NomBase);// -> connection en simple utilisateur à l'ouverture de l'application
+            
+            //faire un if pour éviter les problèmes lors de la connexion si ça ne veut pas se connecter à la base
+
+
             List<Service> services=bddPersonels.GetAllServices();
             List<Fonction> fonctions = bddPersonels.GetAllFonctions();
             List<Personnel> personnels = bddPersonels.GetAllPersonnels();

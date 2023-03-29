@@ -24,12 +24,13 @@ namespace biblioBDDPersonels1
         }
 
         //constructeur pour accéder à la base en gestionnaire
-        public CBDDPersonels1( User ID, string Password, string Host, string Database)//connexion en gestionnaire
+        public CBDDPersonels1( string UserId, string Password, string Host, string Database)
         {
-            string connectionString = "User ID=userBDDW; Password=Password1234@il;  Database=bddpersonnels";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            dc = new BddpersonnelDataContext(connection);
+            //string connectionString = "User Id=userBDDW;Password=Password1234@il;Host=172.16.32.235;Database=bddpersonnels;Persist Security Info=True";
+            string connectionString = "User Id="+UserId+";Password="+Password+";Host="+Host+";Database="+Database+";Persist Security Info=True";
+            //  SqlConnection connection = new SqlConnection(connectionString); //mot clé host non pris en charge
+            dc = new BddpersonnelDataContext(connectionString);
+           
         }
 
 

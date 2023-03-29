@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BddpersonnelContext;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AppliWPF_BDD_Personels
 {
@@ -28,36 +29,52 @@ namespace AppliWPF_BDD_Personels
             TxtBadIPV4.Text = Properties.Settings.Default.IpServeur;
             TxtBportecoute.Text = Properties.Settings.Default.PortEcouteTCP;
             TxtBnomBDD.Text = Properties.Settings.Default.NomBDD;
+            TxtBlogin.Text = Properties.Settings.Default.UserNom;
         }
 
 
         private void Modifier_Click(object sender, RoutedEventArgs e)
         {
-            string username = TxtBlogin.Text;
-            string password = PwdBmdp.Password;
+        
             //enregistre les modifications apportées
+           
+            //if(TxtBadIPV4.Text)
             Properties.Settings.Default.IpServeur = TxtBadIPV4.Text;
+          //  if(TxtBportecoute.Text)
             Properties.Settings.Default.PortEcouteTCP = TxtBportecoute.Text;
             Properties.Settings.Default.NomBDD = TxtBnomBDD.Text;
+            Properties.Settings.Default.UserNom = TxtBlogin.Text;
             Properties.Settings.Default.Save();
-            if (username == "userBDDW" && password == "Password1234@il")
-            {
-                //bdd gestionnaire
-                //A REVOIR
-                //this.Close();
-            }                    
-            if (username == "userBDDR" && password == "Password1234@il")
-            {
-                    //bdd simple utilisateur
-                    bddPersonels = new CBDDPersonels1();
-                    this.Close();
-            }
-            else
-            {
-                //fenêtre d'erreur
-                SaisieIncorrectLoginMdp recommence = new SaisieIncorrectLoginMdp();
-                recommence.ShowDialog();
-            }
+            MessageBox.Show("Paramètres sauvegardés");
+            this.Close();  
+
+
+
+            ///Essaye de modification
+            ///
+
+          
+
+            //if (username == "userBDDW" && password == "Password1234@il")
+            //{
+            //    //bdd gestionnaire
+            //    bddPersonels = new CBDDPersonels1(username, password, host, database);
+            //    //A REVOIR
+            //    //this.Close();
+            //}                    
+            //if (username == "userBDDR" && password == "Password1234@il")
+            //{
+            //        //bdd simple utilisateur
+            //        bddPersonels = new CBDDPersonels1();
+            //        this.Close();
+            //}
+            //else
+            //{
+            //    //fenêtre d'erreur
+            //    SaisieIncorrectLoginMdp recommence = new SaisieIncorrectLoginMdp();
+            //    recommence.ShowDialog();
+            //}
+
 
         }
         private void BtnAnnuler_Click(object sender, RoutedEventArgs e)

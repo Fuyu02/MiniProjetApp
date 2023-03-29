@@ -21,8 +21,10 @@ namespace AppliWPF_BDD_Personels
     /// <summary>
     /// Logique d'interaction pour WinDeconnexion.xaml
     /// </summary>
+   
     public partial class WinDeconnexion : Window
     {
+        private CBDDPersonels1 bddPersonels = null;
         public WinDeconnexion()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace AppliWPF_BDD_Personels
         {
 
             //se décnnecter et reviens à un utilisateur classique
-            //connection.Close(); 
+            bddPersonels = new CBDDPersonels1();
 
             //ouvre la connexion pour un simple utilisateur -> automatique car on se connecte de base en simple utlisateur et ferme la fenêtre
             this.Close();

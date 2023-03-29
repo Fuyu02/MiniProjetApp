@@ -26,10 +26,10 @@
             <MenuItem Header="Menu">
                 <MenuItem x:Name="GestionBdd" Click="GestionBdd_Click" Header="Gestion de la Bdd"></MenuItem>
                 <Separator></Separator>
-                <MenuItem x:Name="GestionFonctionsServices" Visibility="Hidden" Click="GestionFonctionsServices_Click" Header="Gestion Fonctions et Services"></MenuItem>
-                <MenuItem x:Name="GestionPersonnels" Visibility="Hidden" Click="GestionPersonnels_Click" Header="Gestion Personnels"></MenuItem>
+                <MenuItem x:Name="GestionFonctionsServices"  Click="GestionFonctionsServices_Click" Header="Gestion Fonctions et Services"></MenuItem>
+                <MenuItem x:Name="GestionPersonnels" Click="GestionPersonnels_Click" Header="Gestion Personnels"></MenuItem>
                 <Separator></Separator>
-                <MenuItem x:Name="Déconnexion" Visibility="Hidden" Click="Déconnexion_Click" Header="Déconnexion"></MenuItem>
+                <MenuItem x:Name="Déconnexion"  Click="Déconnexion_Click" Header="Déconnexion"></MenuItem>
                 <Separator></Separator>
                 <MenuItem x:Name="FermerApp" Click="FermerApp_Click" Header="Fermer l'application">
                     <MenuItem.Icon>

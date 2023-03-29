@@ -11,5 +11,14 @@
     <Setting Name="NomBDD" Type="System.String" Scope="User">
       <Value Profile="(Default)">bddpersonnels</Value>
     </Setting>
+    <Setting Name="UserNom" Type="System.String" Scope="User">
+      <Value Profile="(Default)">userBDDR</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password1234@il</Value>
+    </Setting>
+    <Setting Name="Vide" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

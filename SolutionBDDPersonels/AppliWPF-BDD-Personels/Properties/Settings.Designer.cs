@@ -58,5 +58,41 @@ namespace AppliWPF_BDD_Personels.Properties {
                 this["NomBDD"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("userBDDR")]
+        public string UserNom {
+            get {
+                return ((string)(this["UserNom"]));
+            }
+            set {
+                this["UserNom"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Password1234@il")]
+        public string Password {
+            get {
+                return ((string)(this["Password"]));
+            }
+            set {
+                this["Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Vide {
+            get {
+                return ((string)(this["Vide"]));
+            }
+            set {
+                this["Vide"] = value;
+            }
+        }
     }
 }

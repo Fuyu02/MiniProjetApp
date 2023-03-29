@@ -47,9 +47,9 @@ namespace AppliWPF_BDD_Personels
 
                 //se connecte en gestionnaire -> ce qui montre le menu du gestionnaire et enlève le menu du simple utilisateur
 
-                bddPersonels = new CBDDPersonels1(); 
+                bddPersonels = new CBDDPersonels1(); // A revoir
 
-                //fermer la connexion du simple utilisateur et la fenêtre
+                //fermer la fenêtre
                 this.Close();
              }
              else
