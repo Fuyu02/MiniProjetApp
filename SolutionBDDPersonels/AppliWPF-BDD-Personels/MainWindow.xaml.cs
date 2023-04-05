@@ -43,6 +43,7 @@ namespace AppliWPF_BDD_Personels
             List<Fonction> fonctions = bddPersonels.GetAllFonctions();
             List<Personnel> personnels = bddPersonels.GetAllPersonnels();
             LbServices.ItemsSource = services;
+            CBxTypeRecherche.Items.Add("Type");
             CBxTypeRecherche.Items.Add("Nom");
             CBxTypeRecherche.Items.Add("Prénom");
             CBxTypeRecherche.Items.Add("Fonction");
