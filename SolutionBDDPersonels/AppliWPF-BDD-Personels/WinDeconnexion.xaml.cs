@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BddpersonnelContext;
 using biblioBDDPersonels1;
-
 using System.Data.SqlClient;
 
 namespace AppliWPF_BDD_Personels
@@ -37,13 +36,22 @@ namespace AppliWPF_BDD_Personels
             this.Close();
         }
 
-        private void BtnOUI_Click(object sender, RoutedEventArgs e)
+        private void BtnOK_Click(object sender, RoutedEventArgs e)
         {
 
             //se décnnecter et reviens à un utilisateur classique
             bddPersonels = new CBDDPersonels1();
+            try
+            {
+                this.DialogResult = false;
+                //faire une fonction dans la main wi
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-            //ouvre la connexion pour un simple utilisateur -> automatique car on se connecte de base en simple utlisateur et ferme la fenêtre
+
             this.Close();
         }
     }

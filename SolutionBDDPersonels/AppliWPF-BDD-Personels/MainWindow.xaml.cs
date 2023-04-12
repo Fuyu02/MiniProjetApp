@@ -34,6 +34,7 @@ namespace AppliWPF_BDD_Personels
             string Username = Properties.Settings.Default.UserNom;
             string Password = Properties.Settings.Default.Password;
 
+            IsNoTransparentMenu(false);
             bddPersonels = new CBDDPersonels1(Username,Password,Ipserveur,NomBase);// -> connection en simple utilisateur à l'ouverture de l'application
             
             //faire un if pour éviter les problèmes lors de la connexion si ça ne veut pas se connecter à la base
@@ -49,6 +50,8 @@ namespace AppliWPF_BDD_Personels
             CBxTypeRecherche.Items.Add("Fonction");
             CBxTypeRecherche.Items.Add("Service");
             
+            //
+            //
             //FELIX
             Trombinoscope();
         }
@@ -65,8 +68,14 @@ namespace AppliWPF_BDD_Personels
         private void Connexion(object sender, RoutedEventArgs e)
         {
             //bouton qui ouvre une fenêtre de connexion, après connexion en gestionnaire n'apparait plus
-            WinConnexion Login= new WinConnexion();
-            Login.ShowDialog();
+            WinConnexion LoginWin= new WinConnexion(ref bddPersonels);
+            
+            if (LoginWin.ShowDialog() == true)
+            {
+                IsNoTransparentMenu(true);
+            }
+           
+           
         }
 
         private void Rechercher(object sender, RoutedEventArgs e)
@@ -110,23 +119,28 @@ namespace AppliWPF_BDD_Personels
 
         private void Déconnexion_Click(object sender, RoutedEventArgs e)
         {
-            //ouvre la fenêtre de déconnexion
+            //ouvre la fenêtre de déconnexion et reprend les paramètres du simple utilisateur
             WinDeconnexion disconnect=new WinDeconnexion(); 
-            disconnect.ShowDialog();
+            
+            if (disconnect.ShowDialog() == false)
+            {
+                IsNoTransparentMenu(false);
+               
+            }
+            
         }
 
 
+        //si on est connecté en gestionnaire de pouvoir accéder à certaines fonctionnalités que le simple utilisateur ne peut pas accéder
+        public void IsNoTransparentMenu(bool activer)
+        {
+
+            GestionFonctionsServices.IsEnabled = activer;
+            GestionPersonnels.IsEnabled = activer;
+            Déconnexion.IsEnabled = activer;
+        }
 
 
-        //pour le menu gestionnaire
-        // on peut faire la visibilité et définir quand le rendre visible MenuGuest.Visible = true; pour l'afficher uniquement si tu es log en gestionnaire
-        //MenuGuest.Visible = false si tu n'es pas connecté pour s'afficher
-        //MenuGuest.Visibility = Visibility.Visible; 
-        //pour le menu simple utilisateur
-        //on peut faire la visibilité et définir quand le rendre visible MenuUser.Visible = true; pour l'afficher uniquement si tu es pas log
-        //MenuUser.Visible = false si tu es connecté en gestionnaire;
-
-        
         
         //
         //
@@ -181,6 +195,8 @@ namespace AppliWPF_BDD_Personels
 
 
         //
+        ///
+        ////
     }
 }
 

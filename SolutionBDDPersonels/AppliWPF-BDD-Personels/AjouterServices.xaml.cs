@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BddpersonnelContext;
+using biblioBDDPersonels1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,13 @@ namespace AppliWPF_BDD_Personels
     /// </summary>
     public partial class AjouterServices : Window
     {
+        private CBDDPersonels1 bddPersonels = null;
+
         public AjouterServices()
         {
             InitializeComponent();
+            bddPersonels = new CBDDPersonels1();
+
         }
 
         private void Fermer(object sender, RoutedEventArgs e)
@@ -33,6 +39,19 @@ namespace AppliWPF_BDD_Personels
         private void AjouterService(object sender, RoutedEventArgs e)
         {
             //enregistre et ajoute le service dans la bdd
+            try
+            {
+                if (TxtBAjService.Text != "") {
+                    Service service = new Service();
+                    //service = TxtBAjService.Text.ToString();
+                    bddPersonels.Ajoutservice(service);
+                }
+                
+            }
+            catch(Exception ex) {
+                throw ex;
+            }   
+
         }
     }
 }

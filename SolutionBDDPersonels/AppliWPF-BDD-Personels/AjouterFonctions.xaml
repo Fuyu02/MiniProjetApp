@@ -9,7 +9,7 @@
     <Grid>
         <TextBox x:Name="TxtBNomFonction" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
         <Label x:Name="LblNomFonction" Content="Nom de la fonction" HorizontalAlignment="Left" Height="25" Margin="37,45,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="BtnAjouterFonction" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterFonction"/>
-        <Button x:Name="BtnAnnulerAjouterF" Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="AnnulerAjoutF"/>
+        <Button x:Name="BtnAjouterFonction" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterFonctionclick"/>
+        <Button x:Name="BtnAnnulerAjouterF" Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="AnnulerAjoutFclick"/>
     </Grid>
 </Window>

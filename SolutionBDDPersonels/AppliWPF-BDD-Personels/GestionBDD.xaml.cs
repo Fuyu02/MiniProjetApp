@@ -43,7 +43,6 @@ namespace AppliWPF_BDD_Personels
 
             }
             Properties.Settings.Default.IpServeur = TxtBadIPV4.Text;
-          //  if(TxtBportecoute.Text)
             Properties.Settings.Default.PortEcouteTCP = TxtBportecoute.Text;
             Properties.Settings.Default.NomBDD = TxtBnomBDD.Text;
             Properties.Settings.Default.UserNom = TxtBlogin.Text;
@@ -51,26 +50,7 @@ namespace AppliWPF_BDD_Personels
             MessageBox.Show("Paramètres sauvegardés");
             this.Close();  
 
-            //if (username == "userBDDW" && password == "Password1234@il")
-            //{
-            //    //bdd gestionnaire
-            //    bddPersonels = new CBDDPersonels1(username, password, host, database);
-            //    //A REVOIR
-            //    //this.Close();
-            //}                    
-            //if (username == "userBDDR" && password == "Password1234@il")
-            //{
-            //        //bdd simple utilisateur
-            //        bddPersonels = new CBDDPersonels1();
-            //        this.Close();
-            //}
-            //else
-            //{
-            //    //fenêtre d'erreur
-            //    SaisieIncorrectLoginMdp recommence = new SaisieIncorrectLoginMdp();
-            //    recommence.ShowDialog();
-            //}
-
+            
 
         }
         private void BtnAnnuler_Click(object sender, RoutedEventArgs e)

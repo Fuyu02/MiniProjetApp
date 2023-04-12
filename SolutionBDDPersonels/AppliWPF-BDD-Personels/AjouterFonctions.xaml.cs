@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BddpersonnelContext;
+using biblioBDDPersonels1;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace AppliWPF_BDD_Personels
 {
@@ -19,19 +23,38 @@ namespace AppliWPF_BDD_Personels
     /// </summary>
     public partial class AjouterFonctions : Window
     {
+        private CBDDPersonels1 bddPersonels = null;
         public AjouterFonctions()
         {
             InitializeComponent();
+            bddPersonels = new CBDDPersonels1();
+            
         }
 
-        private void AnnulerAjoutF(object sender, RoutedEventArgs e)
+        private void AnnulerAjoutFclick(object sender, RoutedEventArgs e)
         {
+            //ferme la fenêtre
             this.Close();
         }
 
-        private void AjouterFonction(object sender, RoutedEventArgs e)
+
+
+        private void AjouterFonctionclick(object sender, RoutedEventArgs e)
         {
-            //enregistre dans la bdd et l'ajoute
+            
+            try
+            {
+                if (TxtBNomFonction.Text != "") // et recherche si existe déjà dans la bdd
+                {
+                    Fonction fonction = new Fonction();
+                    fonction = TxtBNomFonction.Text.ToString();
+                    bddPersonels.Ajoutfonction(fonction);
+                }
+            }
+            catch(Exception ex) {
+                throw ex;
+            }   
+            
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using BddpersonnelContext;
@@ -32,12 +33,134 @@ namespace biblioBDDPersonels1
            
         }
 
-        public  User GetUser()
+        // pour récupérer le login et mdp utilisateur gestionnaire dans la bdd et pour pouvoir le vérifier quand on le tape dans la fenêtre de connexion
+        //fait en link, et pas avec select
+        public  bool isUserAdmin(string user, string mdp)
         {
             try
             {
-                
-                return dc.Users.FirstOrDefault();
+
+              List<User> listeUtilisateurs = dc.Users.ToList();
+              if( listeUtilisateurs.Where(x => x.Password == mdp).Count()>0 && listeUtilisateurs.Where(x => x.Login == user).Count() >0)
+                return true;
+                return false;
+
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public Fonction Getfonction(int _IdFonction)
+        {
+            Fonction fonction = new Fonction();
+            fonction.Id = _IdFonction;
+            return fonction;
+        }
+
+        public Service Getservice(int _IdService) {
+            Service service = new Service();
+            service.Id = _IdService;
+            return service;
+        }
+
+        //ajouter fonction (METTRE EXPLICATION CODE)
+        public void Ajoutfonction(Fonction fonction)
+        {
+            try
+            {
+                dc.Fonctions.InsertOnSubmit(fonction);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex) { 
+                throw ex; 
+            };
+        }
+
+        //modifier une fonction (METTRE EXPLICATION CODE)
+        public void ModifFonction(Fonction fonction)
+        {
+            dc.Connection.Open();
+            using (System.Data.Common.DbTransaction transaction = dc.Connection.BeginTransaction())
+            try
+            {
+                    int fn = fonction.Id;
+                    Fonction fonction2 = dc.Fonctions.Single(x => x.Id == fn);
+                    dc.SubmitChanges();
+                    dc.Fonctions.InsertOnSubmit(fonction);
+                    dc.Fonctions.DeleteOnSubmit(fonction2);
+                    dc.SubmitChanges();
+                    transaction.Commit();
+                }
+            catch(Exception ex) {
+                    transaction.Rollback();
+                    throw ex;
+            }
+        }
+
+        //supprimer une fonction (METTRE EXPLICATION CODE)
+        public void SuppFonction(int id)
+        {
+            try
+            {
+
+                Fonction fonction2 = dc.Fonctions.Single(x => x.Id == id);
+                dc.Fonctions.DeleteOnSubmit(fonction2);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex) { 
+                throw ex; 
+            };
+        }
+
+
+        //ajouter service(METTRE EXPLICATION CODE)
+        public void Ajoutservice(Service service)
+        {
+            try
+            {
+                dc.Services.InsertOnSubmit(service);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            };
+        }
+
+        //Modifier Service(METTRE EXPLICATION CODE)
+        public void Modifservice(Service service)
+        {
+            dc.Connection.Open();
+            using (System.Data.Common.DbTransaction transaction = dc.Connection.BeginTransaction())
+            try
+            {
+                    int ser = service.Id;
+                    Service service2 = dc.Services.Single(x => x.Id == ser);
+                    dc.SubmitChanges();
+                    dc.Services.InsertOnSubmit(service);
+                    dc.Services.DeleteOnSubmit(service2);
+                    dc.SubmitChanges();
+                 transaction.Commit();
+             }
+
+            catch (Exception ex)
+            {
+                    transaction.Rollback();
+                    throw ex;
+            }
+        }
+
+        //supprimer Service(METTRE EXPLICATION CODE)
+
+        public void SuppService(int ser)
+        {
+            try
+            {
+                Service service2= dc.Services.Single(x => x.Id == ser);
+                dc.Services.DeleteOnSubmit(service2);
+                dc.SubmitChanges();
             }
             catch(Exception ex)
             {
@@ -46,7 +169,7 @@ namespace biblioBDDPersonels1
         }
 
 
-        //tableau de services à revoir
+        //tableau de services 
         public List<Service> GetAllServices()
         {
             try
@@ -58,7 +181,7 @@ namespace biblioBDDPersonels1
                 throw ex;
             }
         }
-
+        
 
         //tableau des fonctions
 
@@ -88,8 +211,8 @@ namespace biblioBDDPersonels1
             }
         }
     }
+    }
 
 
 
-    
-}
+   

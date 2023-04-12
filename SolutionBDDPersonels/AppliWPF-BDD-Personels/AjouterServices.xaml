@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="AjouterServices" Height="250" Width="375" MaxHeight="250" MaxWidth="375">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
+        <TextBox x:Name="TxtBAjService" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
         <Label Content="Nom du service" HorizontalAlignment="Left" Height="25" Margin="51,45,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterService"/>
+        <Button x:Name="btnAjService" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterService"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="Fermer"/>
 
     </Grid>

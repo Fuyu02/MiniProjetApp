@@ -27,9 +27,9 @@
                 <MenuItem x:Name="GestionBdd" Click="GestionBdd_Click" Header="Gestion de la Bdd"></MenuItem>
                 <Separator></Separator>
                 <MenuItem x:Name="GestionFonctionsServices"  Click="GestionFonctionsServices_Click" Header="Gestion Fonctions et Services"></MenuItem>
-                <MenuItem x:Name="GestionPersonnels" Click="GestionPersonnels_Click" Header="Gestion Personnels"></MenuItem>
+                <MenuItem x:Name="GestionPersonnels" Click="GestionPersonnels_Click" Header="Gestion Personnels"  ></MenuItem>
                 <Separator></Separator>
-                <MenuItem x:Name="Déconnexion"  Click="Déconnexion_Click" Header="Déconnexion"></MenuItem>
+                <MenuItem x:Name="Déconnexion"  Click="Déconnexion_Click" Header="Déconnexion" ></MenuItem>
                 <Separator></Separator>
                 <MenuItem x:Name="FermerApp" Click="FermerApp_Click" Header="Fermer l'application">
                     <MenuItem.Icon>
@@ -41,17 +41,6 @@
         </Menu>
 
         <TextBox x:Name="TxtBRechercher" HorizontalAlignment="Left" Height="22" Margin="10,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" Grid.Column="1"/>
-
-        <Button x:Name="BtnRecherche" Content="Rechercher" HorizontalAlignment="Left" Height="25" Margin="196,6,0,0" VerticalAlignment="Top" Width="63" RenderTransformOrigin="0.5,0.5" Click="Rechercher" Grid.Column="1">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.651"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
 
         <ListBox x:Name="LbFonction" HorizontalAlignment="Left" Height="169" Margin="0,12,0,0" VerticalAlignment="Top" Width="176" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="1"/>
         <ListBox x:Name="LbServices" HorizontalAlignment="Left" Height="169" Margin="0,181,0,0" VerticalAlignment="Top" Width="176" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="1"/>
