@@ -47,12 +47,14 @@ namespace AppliWPF_BDD_Personels
                 if (TxtBNomFonction.Text != "") // et recherche si existe déjà dans la bdd
                 {
                     Fonction fonction = new Fonction();
-                    fonction = TxtBNomFonction.Text.ToString();
+                    fonction.Intitule = TxtBNomFonction.Text;
                     bddPersonels.Ajoutfonction(fonction);
+                    this.Close();
                 }
             }
             catch(Exception ex) {
                 throw ex;
+
             }   
             
         }

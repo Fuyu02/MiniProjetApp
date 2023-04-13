@@ -43,8 +43,9 @@ namespace AppliWPF_BDD_Personels
             {
                 if (TxtBAjService.Text != "") {
                     Service service = new Service();
-                    //service = TxtBAjService.Text.ToString();
+                    service .Intitule= TxtBAjService.Text;
                     bddPersonels.Ajoutservice(service);
+                    this.Close ();
                 }
                 
             }

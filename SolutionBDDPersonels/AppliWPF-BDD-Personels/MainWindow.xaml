@@ -24,9 +24,9 @@
 
         <Menu x:Name="MenuGest" HorizontalAlignment="Left" Height="27" Margin="72,9,0,0" VerticalAlignment="Top" Width="44" Grid.Column="2">
             <MenuItem Header="Menu">
-                <MenuItem x:Name="GestionBdd" Click="GestionBdd_Click" Header="Gestion de la Bdd"></MenuItem>
+                <MenuItem x:Name="GestionBdd" Click="GestionBdd_Click" Header="Gestion de la Bdd" ></MenuItem>
                 <Separator></Separator>
-                <MenuItem x:Name="GestionFonctionsServices"  Click="GestionFonctionsServices_Click" Header="Gestion Fonctions et Services"></MenuItem>
+                <MenuItem x:Name="GestionFonctionsServices"  Click="GestionFonctionsServices_Click" Header="Gestion Fonctions et Services" ></MenuItem>
                 <MenuItem x:Name="GestionPersonnels" Click="GestionPersonnels_Click" Header="Gestion Personnels"  ></MenuItem>
                 <Separator></Separator>
                 <MenuItem x:Name="Déconnexion"  Click="Déconnexion_Click" Header="Déconnexion" ></MenuItem>

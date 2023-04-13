@@ -9,10 +9,26 @@
     <Grid>
         <Label x:Name="LblNomSorF" Content="Nom du Service ou de la Fonction" HorizontalAlignment="Left" Height="30" Margin="216,86,0,0" VerticalAlignment="Top" Width="202" RenderTransformOrigin="3.131,-0.419"/>
         <Button x:Name="BtnRetour" Content="Retour" HorizontalAlignment="Left" Height="30" Margin="335,407,0,0" VerticalAlignment="Top" Width="106" Click="Retour"/>
-        <ListBox x:Name="LbServices" HorizontalAlignment="Left" Height="180" Margin="25,73,0,0" VerticalAlignment="Top" Width="125" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ListBox x:Name="LbFonctions" HorizontalAlignment="Left" Height="180" Margin="25,253,0,0" VerticalAlignment="Top" Width="125" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="LbServices" HorizontalAlignment="Left" Height="180" Margin="25,73,0,0" VerticalAlignment="Top" Width="159" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LbServices_Selected">
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <TextBlock>
+                        <Run Text="{Binding Path= Intitule}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="LbFonctions" HorizontalAlignment="Left" Height="180" Margin="25,253,0,0" VerticalAlignment="Top" Width="159" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LbFonctions_Selected">
+            <ListBox.ItemTemplate>
+                <DataTemplate >
+                    <TextBlock>
+                        <Run Text="{Binding Path= Intitule}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Button x:Name="BtnSupprimer" Content="Supprimer" HorizontalAlignment="Left" Height="35" Margin="216,182,0,0" VerticalAlignment="Top" Width="78"/>
-        <Button x:Name="BtnModifier" Content="Modifier" HorizontalAlignment="Left" Height="35" Margin="335,182,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="BtnModifier" Content="Modifier" HorizontalAlignment="Left" Height="35" Margin="335,182,0,0" VerticalAlignment="Top" Width="83" Click="BtnModifier_Click"/>
         <StackPanel>
             <Menu x:Name="MenuNouveau" Height="24" Margin="0,0,0,460">
                 <MenuItem x:Name="MenuINouveau" Header="Nouveau">
@@ -22,7 +38,7 @@
 
             </Menu>
         </StackPanel>
-        <TextBox x:Name="TxtBNomSorF" HorizontalAlignment="Left" Height="29" Margin="216,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="TxtBNomSorF" HorizontalAlignment="Left" Height="29" Margin="216,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
 
     </Grid>
 </Window>

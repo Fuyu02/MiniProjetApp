@@ -174,7 +174,7 @@ namespace biblioBDDPersonels1
         {
             try
             {
-                return dc.Services.ToList();
+                return dc.Services.OrderBy(y => y.Intitule).ToList();
             }
             catch (Exception ex)
             {
@@ -189,7 +189,7 @@ namespace biblioBDDPersonels1
         {
             try
             {
-                return dc.Fonctions.ToList();
+                return dc.Fonctions.OrderBy(y => y.Intitule).ToList();
             }
             catch (Exception ex)
             {
@@ -210,6 +210,10 @@ namespace biblioBDDPersonels1
                 throw ex;
             }
         }
+
+
+
+        
     }
     }
 
