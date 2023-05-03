@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\fuyu0\Desktop\MiniPojet\MiniProjet2023\SolutionBDDPersonels\AppliWPF-BDD-Personels\App.xaml
-10-1857652258
+8-2040407793
 
-151033994770
+13525800245
 14-292671778
-AjouterFonctions.xaml;AjouterServices.xaml;GestionBDD.xaml;GestionFonctionsServices.xaml;MainWindow.xaml;ModifierSupprimerFonctions.xaml;ModifierSupprimerServices.xaml;SaisieIncorrectLoginMdp.xaml;WinConnexion.xaml;WinDeconnexion.xaml;
+AjouterFonctions.xaml;AjouterServices.xaml;GestionBDD.xaml;GestionFonctionsServices.xaml;MainWindow.xaml;SaisieIncorrectLoginMdp.xaml;WinConnexion.xaml;WinDeconnexion.xaml;
 
-True
+False
 

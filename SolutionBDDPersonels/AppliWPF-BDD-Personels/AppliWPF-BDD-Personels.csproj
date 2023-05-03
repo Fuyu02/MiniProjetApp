@@ -67,12 +67,6 @@
     <Compile Include="GestionFonctionsServices.xaml.cs">
       <DependentUpon>GestionFonctionsServices.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModifierSupprimerFonctions.xaml.cs">
-      <DependentUpon>ModifierSupprimerFonctions.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ModifierSupprimerServices.xaml.cs">
-      <DependentUpon>ModifierSupprimerServices.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SaisieIncorrectLoginMdp.xaml.cs">
       <DependentUpon>SaisieIncorrectLoginMdp.xaml</DependentUpon>
     </Compile>
@@ -110,14 +104,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ModifierSupprimerFonctions.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ModifierSupprimerServices.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="SaisieIncorrectLoginMdp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="erreur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="connexion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,8 +7,17 @@
         mc:Ignorable="d"
         Title="WinDeconnexion" Height="200" Width="250" MaxHeight="200" MaxWidth="250">
     <Grid>
+        
         <Label x:Name="Lblsedeconnecter" Content="Vous êtes déconnecté" HorizontalAlignment="Center" Height="31" Margin="0,27,0,0" VerticalAlignment="Top" Width="134"/>
-        <Button x:Name="BtnOUI" Content="OK" Click="BtnOK_Click" HorizontalAlignment="Center" Height="27" Margin="0,111,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="BtnOUI" Content="OK" Click="BtnOK_Click" HorizontalAlignment="Center" Height="27" Margin="0,111,0,0" VerticalAlignment="Top" Width="76">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Window>

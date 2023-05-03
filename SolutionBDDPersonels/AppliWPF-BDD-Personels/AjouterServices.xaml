@@ -7,10 +7,40 @@
         mc:Ignorable="d"
         Title="AjouterServices" Height="250" Width="375" MaxHeight="250" MaxWidth="375">
     <Grid>
-        <TextBox x:Name="TxtBAjService" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF3EC6B2" Offset="0"/>
+                <GradientStop Color="#FF2E2B2B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="TxtBAjService" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
         <Label Content="Nom du service" HorizontalAlignment="Left" Height="25" Margin="51,45,0,0" VerticalAlignment="Top" Width="101"/>
-        <Button x:Name="btnAjService" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterService"/>
-        <Button Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="Fermer"/>
+        <Button x:Name="btnAjService" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterService">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="Fermer">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Window>

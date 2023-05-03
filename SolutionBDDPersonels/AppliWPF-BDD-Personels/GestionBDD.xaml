@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="GestionBDD" Height="500" Width="450" MaxHeight="500" MaxWidth="450">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF3EC6B2" Offset="0"/>
+                <GradientStop Color="#FF2E2B2B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="169*"/>
             <RowDefinition Height="156*"/>
@@ -18,13 +24,69 @@
         <Label x:Name="Lbllogin" Content="Login du compte d'accès à la BDD" HorizontalAlignment="Left" Height="30" Margin="37,37,0,0" VerticalAlignment="Top" Width="207" Grid.Row="1"/>
         <Label x:Name="Lblmdp" Content="Mot de passe" HorizontalAlignment="Left" Height="33" Margin="37,90,0,0" VerticalAlignment="Top" Width="140" Grid.Row="1"/>
         <Label x:Name="LblnomBDD" Content="Nom de la BDD" HorizontalAlignment="Left" Height="28" Margin="37,21,0,0" VerticalAlignment="Top" Width="140" Grid.Row="2"/>
-        <PasswordBox x:Name="PwdBmdp" HorizontalAlignment="Left" Height="33" Margin="249,90,0,0" VerticalAlignment="Top" Width="163" Grid.Row="1"/>
-        <TextBox x:Name="TxtBadIPV4" HorizontalAlignment="Left" Height="29" Margin="264,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
-        <TextBox x:Name="TxtBportecoute" HorizontalAlignment="Left" Height="31" Margin="264,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
-        <TextBox x:Name="TxtBlogin" HorizontalAlignment="Left" Height="30" Margin="249,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Grid.Row="1"/>
-        <TextBox x:Name="TxtBnomBDD" HorizontalAlignment="Left" Height="28" Margin="225,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Grid.Row="2"/>
-        <Button x:Name="BtnModifier" Content="Modifier" Click="Modifier_Click" HorizontalAlignment="Left" Height="23" Margin="66,24,0,0" VerticalAlignment="Top" Width="82" Grid.Row="3"/>
-        <Button x:Name="BtnAnnuler" Content="Annuler" Click="BtnAnnuler_Click" HorizontalAlignment="Left" Height="23" Margin="264,24,0,0" VerticalAlignment="Top" Width="97" Grid.Row="3"/>
+        <PasswordBox x:Name="PwdBmdp" HorizontalAlignment="Left" Height="33" Margin="249,90,0,0" VerticalAlignment="Top" Width="163" Grid.Row="1">
+            <PasswordBox.Template>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </PasswordBox.Template>
+        </PasswordBox>
+        <TextBox x:Name="TxtBadIPV4" HorizontalAlignment="Left" Height="29" Margin="264,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtBportecoute" HorizontalAlignment="Left" Height="31" Margin="264,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtBlogin" HorizontalAlignment="Left" Height="30" Margin="249,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Grid.Row="1">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <TextBox x:Name="TxtBnomBDD" HorizontalAlignment="Left" Height="28" Margin="225,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Grid.Row="2">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
+        <Button x:Name="BtnModifier" Content="Modifier" Click="Modifier_Click" HorizontalAlignment="Left" Height="23" Margin="66,24,0,0" VerticalAlignment="Top" Width="82" Grid.Row="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="BtnAnnuler" Content="Annuler" Click="BtnAnnuler_Click" HorizontalAlignment="Left" Height="23" Margin="264,24,0,0" VerticalAlignment="Top" Width="97" Grid.Row="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 </Window>

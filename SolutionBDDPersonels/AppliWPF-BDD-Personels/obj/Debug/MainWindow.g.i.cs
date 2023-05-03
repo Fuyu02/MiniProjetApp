@@ -41,7 +41,7 @@ namespace AppliWPF_BDD_Personels {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 21 "..\..\MainWindow.xaml"
+        #line 32 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnLogin;
         
@@ -49,7 +49,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 23 "..\..\MainWindow.xaml"
+        #line 38 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnTrier;
         
@@ -57,7 +57,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 25 "..\..\MainWindow.xaml"
+        #line 40 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Menu MenuGest;
         
@@ -65,7 +65,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 27 "..\..\MainWindow.xaml"
+        #line 42 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.MenuItem GestionBdd;
         
@@ -73,7 +73,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 29 "..\..\MainWindow.xaml"
+        #line 44 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.MenuItem GestionFonctionsServices;
         
@@ -81,7 +81,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 30 "..\..\MainWindow.xaml"
+        #line 45 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.MenuItem GestionPersonnels;
         
@@ -89,7 +89,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 32 "..\..\MainWindow.xaml"
+        #line 47 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.MenuItem Déconnexion;
         
@@ -97,7 +97,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 34 "..\..\MainWindow.xaml"
+        #line 49 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.MenuItem FermerApp;
         
@@ -105,7 +105,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 43 "..\..\MainWindow.xaml"
+        #line 58 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxtBRechercher;
         
@@ -113,7 +113,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 45 "..\..\MainWindow.xaml"
+        #line 60 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox LbFonction;
         
@@ -121,7 +121,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 46 "..\..\MainWindow.xaml"
+        #line 61 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox LbServices;
         
@@ -129,7 +129,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 49 "..\..\MainWindow.xaml"
+        #line 64 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox CBxTypeRecherche;
         
@@ -137,7 +137,7 @@ namespace AppliWPF_BDD_Personels {
         #line hidden
         
         
-        #line 50 "..\..\MainWindow.xaml"
+        #line 65 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox ListBoxTrom;
         
@@ -177,7 +177,7 @@ namespace AppliWPF_BDD_Personels {
             case 1:
             this.BtnLogin = ((System.Windows.Controls.Button)(target));
             
-            #line 21 "..\..\MainWindow.xaml"
+            #line 32 "..\..\MainWindow.xaml"
             this.BtnLogin.Click += new System.Windows.RoutedEventHandler(this.Connexion);
             
             #line default
@@ -186,7 +186,7 @@ namespace AppliWPF_BDD_Personels {
             case 2:
             this.BtnTrier = ((System.Windows.Controls.Button)(target));
             
-            #line 23 "..\..\MainWindow.xaml"
+            #line 38 "..\..\MainWindow.xaml"
             this.BtnTrier.Click += new System.Windows.RoutedEventHandler(this.Trier);
             
             #line default
@@ -198,7 +198,7 @@ namespace AppliWPF_BDD_Personels {
             case 4:
             this.GestionBdd = ((System.Windows.Controls.MenuItem)(target));
             
-            #line 27 "..\..\MainWindow.xaml"
+            #line 42 "..\..\MainWindow.xaml"
             this.GestionBdd.Click += new System.Windows.RoutedEventHandler(this.GestionBdd_Click);
             
             #line default
@@ -207,7 +207,7 @@ namespace AppliWPF_BDD_Personels {
             case 5:
             this.GestionFonctionsServices = ((System.Windows.Controls.MenuItem)(target));
             
-            #line 29 "..\..\MainWindow.xaml"
+            #line 44 "..\..\MainWindow.xaml"
             this.GestionFonctionsServices.Click += new System.Windows.RoutedEventHandler(this.GestionFonctionsServices_Click);
             
             #line default
@@ -216,7 +216,7 @@ namespace AppliWPF_BDD_Personels {
             case 6:
             this.GestionPersonnels = ((System.Windows.Controls.MenuItem)(target));
             
-            #line 30 "..\..\MainWindow.xaml"
+            #line 45 "..\..\MainWindow.xaml"
             this.GestionPersonnels.Click += new System.Windows.RoutedEventHandler(this.GestionPersonnels_Click);
             
             #line default
@@ -225,7 +225,7 @@ namespace AppliWPF_BDD_Personels {
             case 7:
             this.Déconnexion = ((System.Windows.Controls.MenuItem)(target));
             
-            #line 32 "..\..\MainWindow.xaml"
+            #line 47 "..\..\MainWindow.xaml"
             this.Déconnexion.Click += new System.Windows.RoutedEventHandler(this.Déconnexion_Click);
             
             #line default
@@ -234,7 +234,7 @@ namespace AppliWPF_BDD_Personels {
             case 8:
             this.FermerApp = ((System.Windows.Controls.MenuItem)(target));
             
-            #line 34 "..\..\MainWindow.xaml"
+            #line 49 "..\..\MainWindow.xaml"
             this.FermerApp.Click += new System.Windows.RoutedEventHandler(this.FermerApp_Click);
             
             #line default

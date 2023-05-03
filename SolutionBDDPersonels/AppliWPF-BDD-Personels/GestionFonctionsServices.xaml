@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="GestionFonctionsServices" Height="500" Width="500" MaxHeight="500" MaxWidth="500">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF3EC6B2" Offset="0"/>
+                <GradientStop Color="#FF2E2B2B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Label x:Name="LblNomSorF" Content="Nom du Service ou de la Fonction" HorizontalAlignment="Left" Height="30" Margin="216,86,0,0" VerticalAlignment="Top" Width="202" RenderTransformOrigin="3.131,-0.419"/>
         <Button x:Name="BtnRetour" Content="Retour" HorizontalAlignment="Left" Height="30" Margin="335,407,0,0" VerticalAlignment="Top" Width="106" Click="Retour"/>
         <ListBox x:Name="LbServices" HorizontalAlignment="Left" Height="180" Margin="25,73,0,0" VerticalAlignment="Top" Width="159" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LbServices_Selected">
@@ -38,7 +44,15 @@
 
             </Menu>
         </StackPanel>
-        <TextBox x:Name="TxtBNomSorF" HorizontalAlignment="Left" Height="29" Margin="216,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <TextBox x:Name="TxtBNomSorF" HorizontalAlignment="Left" Height="29" Margin="216,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
 
     </Grid>
 </Window>

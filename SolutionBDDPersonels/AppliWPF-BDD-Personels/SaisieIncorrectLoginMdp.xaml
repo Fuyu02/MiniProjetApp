@@ -8,7 +8,15 @@
         Title="SaisieIncorrectLoginMdp" Height="190" Width="400" MaxHeight="190" MaxWidth="400">
     <Grid>
         <Label Content="Le nom d'utilisateur ou le mot de passe est incorect." HorizontalAlignment="Left" Height="26" Margin="73,35,0,0" VerticalAlignment="Top" Width="286"/>
-        <Button Content="OK" HorizontalAlignment="Center" Height="30" Margin="0,101,0,0" VerticalAlignment="Top" Width="80" Click="okerreur"/>
+        <Button Content="OK" HorizontalAlignment="Center" Height="30" Margin="0,101,0,0" VerticalAlignment="Top" Width="80" Click="okerreur">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         <Image Source="erreur.png" HorizontalAlignment="Left" Height="41" Margin="10,28,0,0" VerticalAlignment="Top" Width="42"/>
 
     </Grid>

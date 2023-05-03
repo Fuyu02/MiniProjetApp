@@ -7,9 +7,39 @@
         mc:Ignorable="d"
         Title="AjouterFonctions" Height="250" Width="375" MaxHeight="250" MaxWidth="375">
     <Grid>
-        <TextBox x:Name="TxtBNomFonction" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF3EC6B2" Offset="0"/>
+                <GradientStop Color="#FF2E2B2B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="TxtBNomFonction" HorizontalAlignment="Left" Height="23" Margin="193,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
         <Label x:Name="LblNomFonction" Content="Nom de la fonction" HorizontalAlignment="Left" Height="25" Margin="37,45,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="BtnAjouterFonction" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterFonctionclick"/>
-        <Button x:Name="BtnAnnulerAjouterF" Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="AnnulerAjoutFclick"/>
+        <Button x:Name="BtnAjouterFonction" Content="Ajouter" HorizontalAlignment="Left" Height="42" Margin="51,147,0,0" VerticalAlignment="Top" Width="89" Click="AjouterFonctionclick">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="BtnAnnulerAjouterF" Content="Annuler" HorizontalAlignment="Left" Height="42" Margin="208,147,0,0" VerticalAlignment="Top" Width="104" Click="AnnulerAjoutFclick">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="LightGray">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
